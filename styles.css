@@ -1,0 +1,1106 @@
+/* ========================== Google Fonts =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+/* ========================== Some Variables =============== */
+:root{
+  --main-color: #06452f;
+  --sub-main-color: #032c1f;
+  --yellow-color: #edba2d;
+  --black: #222;
+  --white: #fff;
+  --light-color: #666;
+  --bg-color: #f0faf6;
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+  --border: .1rem solid rgba(0,0,0,.1);
+}
+
+/* ========================== Global Tags =============== */
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body{
+  background: var(--white);
+}
+section{
+  padding: 5vw 8vw 0 8vw;
+}
+h1{
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--light-color);
+  
+}
+span{
+  font-size: .9rem;
+  color: var(--light-color);
+}
+h6{
+  font-size: 1.5rem;
+  color: var(--sub-main-color);
+  font-weight: 600;
+}
+
+/*######################################################*/
+/* ========================== HOME PAGE =============== */
+/*######################################################*/
+
+/* ========================== Nav Bar =============== */
+nav{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2vw 8vw;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+nav .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+nav .navigation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu-btn,
+#closeMenu-btn{
+  font-size: 20px;
+  color: var(--black);
+  display: none;
+}
+nav .navigation ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .navigation ul li{
+  margin-left: 30px;
+}
+nav .navigation ul li a{
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+nav .navigation ul li a:hover{
+  color: var(--yellow-color);
+}
+
+/*========================== Home Section ===============*/
+#home{
+  background-image: linear-gradient(rgba(5, 54, 32, 0.3), rgba(5, 54, 32, 0.7)), url(img/bg-Image.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+.home h2{
+  font-size: 3.5rem;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+.home p{
+  width: 46%;
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 25px;
+}
+.home .btn{
+  margin-top: 30px;
+}
+.home .btn a{
+  font-size: 1.5rem;
+  background: var(--white);
+  padding: 13px 35px;
+  border-radius: 5px;
+}
+.home .btn a.mainColor{
+  color: var(--white);
+  background-color: var(--main-color);
+}
+.home .btn a.mainColor:hover{
+  color: var(--main-color);
+  background-color: var(--white);
+}
+.home .btn a.yellowColor{
+  color: var(--white);
+  background-color: var(--yellow-color);
+}
+.home .btn a.yellowColor:hover{
+  color: var(--main-color);
+  background-color: var(--white);
+}
+
+/*========================== Features Section ===============*/
+#features{
+  text-align: center;
+}
+.features .card{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+.features .card .card-box{
+  background: var(--bg-color);
+  text-align: start;
+  padding: 30px;
+}
+.features .card .card-box i{
+  font-size: 5rem;
+  color: var(--sub-main-color);
+  margin-bottom: 10px;
+}
+.features .card .card-box h3{
+  font-size: 2.2rem;
+  color: var(--black);
+  padding: 13px 0 7px 0;
+  font-weight: 600;
+}
+.features .card .card-box p{
+  color: #575e5c;
+}
+
+/*========================== Courses Section ===============*/
+#course{
+  padding: 5vw 8vw 5vw 8vw;
+  text-align: center;
+}
+#course .courses{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+#course .courses .course-box{
+  position: relative;
+  text-align: start;
+  background: var(--bg-color);
+  height: 100%;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+#course .courses .course-box .image{
+  height: 18rem;
+  width: 100%;
+  overflow: hidden;
+}
+#course .courses .course-box .image img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#course .courses .course-box:hover .image img{
+  transform: scaleY(1.2);
+}
+#course .courses .course-box .details{
+  padding: 16px;
+  line-height: 20px;
+}
+#course .courses .course-box .details span{
+  font-size: 1.2rem;
+  color: var(--light-color);
+}
+#course .courses .course-box .details i{
+  font-size: 1.2rem;
+  color: var(--yellow-color);
+}
+#course .courses .course-box .price{
+  position: absolute;
+  background-color: var(--main-color);
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30%;
+  top: 56%;
+  right: 3%;
+}
+
+/*========================== Register Section ===============*/
+#register{
+  padding: 8vw 8vw 8vw 8vw;
+  background-image: linear-gradient(rgba(99, 112, 168, 0.5), rgba(81, 91, 233, 0.5)), url(img/reg-bg2.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+#register .reminder{
+  color: var(--white);
+  text-align: start;
+}
+#register .reminder p{
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+#register .reminder h1{
+  color: var(--white);
+}
+#register .reminder .time{
+  display: flex;
+  margin-top: 40px;
+}
+#register .reminder .time .date{
+  padding: 13px 33px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  font-size: 1.4rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+  margin: 0 5px 10px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-weight: 600;
+}
+#register .form {
+  background: rgba(236, 232, 232, 0.785);
+  backdrop-filter: blur(2px);
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+#register .form h3{
+  color: var(--black);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+#register .form form{
+  display: flex;
+  flex-direction: column;
+}
+#register .form form input{
+  color: var(--light-color);
+  padding: 10px 14px;
+  border: 1px solid rgba(31, 38, 135, 0.37);
+  margin: 8px 0;
+  background: none;
+}
+#register .form form input::placeholder{
+  color: var(--light-color);
+}
+#register .form form .btn{
+  text-align: end;
+  margin-top: 20px;
+}
+#register .form form .btn a{
+  font-size: 1.5rem;
+  background: var(--white);
+  padding: 10px 35px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--yellow-color);
+}
+#register .form form .btn a:hover{
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background: rgba(236, 232, 232, 0.13);
+}
+
+/*========================== Experts Section ===============*/
+#experts{
+  padding: 5vw 8vw 5vw 8vw;
+  text-align: center;
+}
+.experts .expert-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+.experts .expert-box .profile{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 32rem;
+  background: var(--bg-color);
+  padding: 15px 10px 30px 10px;
+}
+.experts .expert-box .profile img{
+  width: 70%;
+  height: 18rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 10px solid var(--white);
+}
+.experts .expert-box .profile h6{
+  font-size: 1.7rem;
+  margin-top: 13px;
+}
+.experts .expert-box .profile .pro-link{
+  margin-top: 16px;
+  position: absolute;
+  bottom: -6rem;
+  left: 0;
+  right: 0;
+  transition: .3s linear;
+}
+.experts .expert-box .profile:hover .pro-link{
+  bottom: 2rem;
+}
+.experts .expert-box .profile .pro-link i{
+  padding: 10px 12px;
+  border: 1px solid var(--main-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.experts .expert-box .profile .pro-link i:hover{
+  background: var(--main-color);
+  color: var(--white);
+}
+
+
+
+/*######################################################*/
+/* ========================== ABOUT PAGE =============== */
+/*######################################################*/
+#about{
+  padding: 8vw 8vw 0vw 8vw;
+}
+.about .about-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about-container .image{
+  width: 66rem;
+  height: 52rem;
+}
+.about .about-container .image img{
+  width: 100%;
+  height: 100%;
+}
+.about .about-container .content{
+  width: 400px;
+}
+.about .about-container .content h3{
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: var(--sub-main-color);
+  margin-bottom: 16px;
+}
+.about .about-container .content p{
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+.about .about-container .content .contentBox .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 24px;
+}
+.about .about-container .content .contentBox .box i{
+  color: var(--sub-main-color);
+  width: 90px;
+}
+.about .about-container .content .contentBox .box .box-text h4{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--sub-main-color);
+  margin-bottom: 6px;
+}
+.about .about-container .content .contentBox .box .box-text span{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--light-color);
+  line-height: 18px;
+}
+.about-features{
+  padding-bottom: 4vw;
+}
+
+#trusted{
+  text-align: center;
+  padding: 3vw 8vw 4vw 8vw;
+}
+#trusted .trust-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.4rem;
+  align-items: center;
+}
+#trusted .trust-container img{
+  width: 80%;
+  height: 80%;
+}
+
+
+/*######################################################*/
+/* ========================== BLOG PAGE =============== */
+/*######################################################*/
+.blog .blog-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.blog .blog-container .content{
+  width: 60%;
+}
+.blog .blog-container .content .box{
+  width: 100%;
+  margin-bottom: 60px;
+}
+.blog .blog-container .content .box .image img{
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.blog .blog-container .content .box h3{
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: var(--sub-main-color);
+  margin-bottom: 16px;
+}
+.blog .blog-container .content .box p{
+  line-height: 23px;
+  text-align: justify;
+}
+.blog .blog-container .content .box .blog-btn{
+  padding: 12px 20px;
+  background: var(--sub-main-color);
+  width: 140px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: 6px;
+}
+.blog .blog-container .content .box .blog-btn:hover{
+  background: var(--main-color);
+}
+.blog .blog-container .category{
+  width: 30%;
+}
+.blog .blog-container .category h3{
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--sub-main-color);
+  margin-bottom: 6px;
+}
+.blog .blog-container .category li{
+  font-size: 1.4rem;
+  color: #777;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.blog-post .blog-container .content{
+  width: 60%;
+  margin: 0 auto;
+}
+.blog-post .blog-container .content .box{
+  width: 100%;
+  margin-bottom: 60px;
+}
+.blog-post .blog-container .content .box .image img{
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.blog-post .blog-container .content .box h3{
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: var(--sub-main-color);
+  margin-bottom: 16px;
+}
+.blog-post .blog-container .content .box p{
+  line-height: 23px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.blog-post .blog-container .content .box .blog-btn{
+  padding: 12px 20px;
+  background: var(--sub-main-color);
+  width: 140px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: 6px;
+}
+.blog-post .blog-container .content .box .blog-btn:hover{
+  background: var(--main-color);
+}
+
+
+/*######################################################*/
+/* ========================== COURSE PAGE =============== */
+/*######################################################*/
+.course-enroll .courses{
+  display: flex;
+  justify-content: space-between;
+  gap: 1.8rem;
+}
+.course-enroll .courses .course-box{
+  width: 780px;
+}
+.course-enroll .courses .course-box .image img{
+  width: 100%;
+  height: 60%;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.course-enroll .courses .course-box .details{
+  display: flex;
+  justify-content: space-between;
+}
+.course-enroll .courses .course-box .details .details-box h6{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.course-enroll .courses .course-box .details .details-box .rating{
+  font-size: 1.3rem;
+  color: var(--yellow-color);
+  margin: 10px 0 10px 0;
+}
+.course-enroll .courses .course-box .details .cost span{
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: bolder;
+  background: #06452f42;
+  padding: 13px 20px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+.course-enroll .courses .course-include{
+  width: 300px;
+  height: max-content;
+  background: var(--white);
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.104);
+  padding: 20px;
+  border-radius: 10px;
+}
+.course-enroll .courses .course-include h6{
+ font-size: 1.8rem;
+ color: var(--main-color);
+ font-weight: bold;
+ margin: 10px 0 5px 0;
+}
+.course-enroll .courses .course-include li{
+ font-size: 1.3rem;
+ color: var(--light-color);
+ padding-top: 20px;
+}
+.course-enroll .courses .course-include i{
+  width: 15px;
+  margin-right: 10px;
+  color: var(--main-color);
+  font-size: 1.4rem;
+}
+.course-enroll .courses .course-include .enroll-btn{
+  display: block;
+  text-align: center;
+  padding: 12px 22px;
+  background: var(--main-color);
+  margin: 30px 0 10px 0;
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 5px;
+}
+.course-enroll .courses .course-include .enroll-btn:hover{
+  background: var(--sub-main-color);
+}
+
+
+.course-enroll .courses .course-box .instructor h4{
+  font-size: 2rem;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.course-enroll .courses .course-box .instructor .card{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.course-enroll .courses .course-box .instructor .card img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.course-enroll .courses .course-box .instructor .card .profile h6{
+  font-size: 1.9rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.course-enroll .courses .course-box .instructor .card .profile span{
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+hr{
+  border-bottom: 1px solid #999;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.course-enroll .courses .course-box .overview h6,
+.course-enroll .courses .course-box .overview2 h6{
+  font-size: 1.9rem;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.course-enroll .courses .course-box .overview p{
+  font-size: 1.4rem;
+  text-align: justify;
+}
+.course-enroll .courses .course-box .overview2{
+  margin-bottom: 100px;
+}
+.course-enroll .courses .course-box .overview2 li{
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+.course-enroll .courses .course-box .overview2 li i{
+  margin-right: 10px;
+  font-size: 1.4rem;
+  color: var(--main-color);
+}
+
+/*######################################################*/
+/* ========================== CONTACT PAGE =============== */
+/*######################################################*/
+.contact .contactBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 40px 0 40px 0;
+}
+.contact .contactBox .get-in-touch{
+  width: 32%;
+  /* background-color: #ccc; */
+}
+.contact .contactBox .get-in-touch h1{
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+.contact .contactBox .get-in-touch hr{
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #999;
+}
+.contact .contactBox .get-in-touch .get-in-touchBox h6{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.contact .contactBox .get-in-touch .get-in-touchBox .box{
+  display: flex;
+  margin-bottom: 30px;
+}
+.contact .contactBox .get-in-touch .get-in-touchBox .box i{
+  font-size: 2rem;
+  width: 40px;
+  color: var(--main-color);
+}
+.contact .contactBox .get-in-touch .get-in-touchBox .box span{
+  font-size: 1.2rem;
+}
+.contact .contactBox .get-in-touch .get-in-touchBox .getIT_icon .icon{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #999;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.contact .contactBox .get-in-touch .get-in-touchBox .getIT_icon .icon:hover{
+  background-color: var(--main-color);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.contact .contactBox .contactForm{
+  width: 61%;
+  background-color: rgba(48, 102, 80, 0.055);
+  padding: 30px;
+  border-radius: 10px;
+}
+.contact .contactBox .contactForm h4{
+  font-size: 2.2rem;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.contact .contactBox .contactForm form{
+  width: 100%;
+}
+.contact .contactBox .contactForm form div{
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contactBox .contactForm form div .box{
+  width: 48.5%;
+}
+.contact .contactBox .contactForm form .box{
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+.contact .contactBox .contactForm form .btn-send{
+  display: block;
+  text-align: center;
+  padding: 12px 22px;
+  background: var(--main-color);
+  margin: 5px 0 5px 0;
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 5px;
+}
+.contact .contactBox .contactForm form .btn-send:hover{
+    background-color: var(--sub-main-color);
+}
+
+
+
+
+
+
+/*========================== Footer Section ===============*/
+footer{
+  padding: 6vw 8vw 4vw 8vw;
+  background: var(--sub-main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+footer .containerBox h3{
+  padding-bottom: 25px;
+  color: #dce6e2;
+  font-size: 1.9rem;
+}
+footer .containerBox li, p{
+  padding-bottom: 18px;
+  color: #7b838a;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+footer .containerBox li:hover{
+  color: #dce6e2;
+}
+footer .containerBox .subscribe{
+  margin-top: 10px;
+}
+footer .containerBox .subscribe input{
+  padding: 13px 12px;
+  width: 180px;
+  background: #214538;
+  color: #eee;
+}
+footer .containerBox .subscribe input::placeholder{
+  color: #7b838a;
+}
+footer .containerBox .subscribe a{
+  font-size: 1.4rem;
+  background: var(--white);
+  padding: 12px;
+  color: var(--sub-main-color);
+  background-color: var(--yellow-color);
+  font-weight: 600;
+}
+footer .containerBox .subscribe a:hover{
+  background: #dce6e2;
+}
+footer .copyright{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .copyright p{
+  color: #eee;
+  font-size: 1.6rem;
+}
+footer .copyright .pro-link i{
+  margin-top: -7px;
+  padding: 10px 12px;
+  border: 1px solid var(--main-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: .3s linear;
+  background: #7b838a;
+}
+footer .copyright .pro-link i:hover{
+  background: var(--yellow-color);
+  color: var(--sub-main-color);
+}
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+  html{
+      font-size: 55%;
+  }
+  section{
+    padding: 8vw 4vw 0 4vw;
+  }
+  #register .reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .about .about-container .image{
+    width: 66rem;
+    height: 52rem;
+  }
+  .about .about-container .image img{
+    width: 90%;
+    height: 90%;
+  }
+  
+}
+
+@media (max-width:768px){
+  section{
+    padding: 8vw 4vw 0 4vw;
+  }
+  nav {
+    padding: 14px 20px;
+  }
+  nav .logo {
+    font-size: 2.2rem;
+  }
+  #menu-btn{
+  display: initial;
+  }
+  #closeMenu-btn{
+    display: initial;
+    font-size: 2.5rem;
+    color: var(--white);
+    padding: 30px 0 20px 20px;
+  }
+  nav .navigation ul {
+    position: absolute;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(5, 54, 32, 0.7);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  nav .navigation ul.active{
+    right: 0;
+  }
+  nav .navigation ul li{
+    padding: 20px 0 20px 40px;
+    margin-left: 0;
+  }
+  nav .navigation ul li a{
+    color: var(--white);
+  }
+  .home p {
+    width: 75%;
+  }
+  #features {
+    padding: 8vw 4vw 4vw 4vw;
+  }
+  #course {
+    padding: 8vw 4vw 4vw 4vw;
+  }
+  #register {
+    padding: 8vw 4vw 8vw 4vw;
+  }
+  #register .reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  #experts {
+    padding: 8vw 4vw 4vw 4vw;
+  }
+  #about{
+    padding: 8vw 4vw 0vw 4vw;
+  }
+  .about .about-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about .about-container .image{
+    width: 66rem;
+    height: 52rem;
+  }
+  .about .about-container .image img{
+    width: 90%;
+    height: 90%;
+  }
+  .blog-post .blog-container .content{
+    width: 100%;
+  }
+}
+
+@media (max-width:600px){
+  #about{
+    padding: 8vw 4vw -2vw 4vw;
+  }
+  .about .about-container{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .about .about-container .image img{
+    width: 100%;
+    height: 100%;
+  }
+  .about .about-container .image{
+    margin-bottom: 20px;
+  }
+  .course-enroll .courses{
+    display: block;
+  }
+  .course-enroll .courses .course-box .overview2{
+    margin-bottom: 30px;
+  }
+  .course-enroll .courses .course-box,
+  .course-enroll .courses .course-include{
+    width: 100%;
+  }
+  .course-enroll .courses .course-include{
+    margin-bottom: 20px;
+  }
+  .contact .contactBox {
+    display: block;
+  }
+  .contact .contactBox .get-in-touch {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contact .contactBox .contactForm {
+    width: 100%;
+  }
+}
+
+@media (max-width:450px){
+  html{
+      font-size: 50%;
+  }
+  .home h2{
+    font-size: 3rem;
+  }
+  #register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #register .reminder .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .blog .blog-container{
+    display: block;
+  }
+  .blog .blog-container .content,
+  .blog .blog-container .category{
+    width: 100%;
+  }
+  .blog .blog-container .category{
+    margin-bottom: 20px;
+  }
+  .blog .blog-container .content .box{
+    margin-bottom: 40px;
+  }
+  .course-enroll .courses .course-box .details .cost span{
+    font-size: 1.6rem;
+    padding: 8px 14px;
+  }
+  .contact .contactBox .contactForm form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact .contactBox .contactForm form div .box{
+    width: 100%;
+  }
+
+  footer{
+    width: 100%;
+  }
+  footer .containerBox .subscribe{
+    display: flex;
+    width: 100%;
+  }
+  footer .containerBox .subscribe input{
+   width: 70%;
+  }
+  footer .containerBox .subscribe a{
+    width: 30%;
+  }
+}
+
+@media (max-width:400px){
+  .about .about-container .image img {
+    width: 100%;
+    height: 70%;
+  }
+  .about .about-container .content h3 {
+    margin-top: -100px;
+  }
+  .contact .contactBox .contactForm {
+   padding: 15px;
+  }
+}
